@@ -23,7 +23,6 @@ export function LoginPage() {
 
   return (
     <div className="min-h-screen bg-background flex items-center justify-center p-4">
-      {/* Theme toggle */}
       <button
         onClick={toggleTheme}
         aria-label="Alternar tema"
@@ -32,20 +31,16 @@ export function LoginPage() {
         {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
       </button>
 
-      {/* Card */}
       <div className="w-full max-w-[440px] bg-card border border-card-border rounded-2xl shadow-card px-10 py-10">
-        {/* Logo */}
         <div className="flex justify-center mb-7">
           <IsatecLogo size={64} />
         </div>
 
-        {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-title text-foreground">Bem-vindo</h1>
           <p className="text-subtitle text-foreground-secondary mt-1">Faça login na sua conta</p>
         </div>
 
-        {/* Form */}
         <form onSubmit={handleSubmit(onSubmit)} noValidate className="flex flex-col gap-5">
           <Input
             label="E-mail"
@@ -85,7 +80,6 @@ export function LoginPage() {
           </button>
         </form>
 
-        {/* Footer */}
         <p className="text-center text-caption text-foreground-muted mt-8">
           © 2026 Isatec Sistemas e Consultoria
         </p>
