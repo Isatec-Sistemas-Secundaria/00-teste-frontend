@@ -31,9 +31,9 @@ export function LoginPage() {
         {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
       </button>
 
-      <div className="w-full max-w-[440px] bg-card border border-card-border rounded-2xl shadow-card px-10 py-10">
+      <div className="w-full max-w-[440px] bg-card border border-card-border rounded-2xl shadow-card px-10 pt-10 pb-3">
         <div className="flex justify-center mb-7">
-          <IsatecLogo size={64} />
+          <IsatecLogo size={80} />
         </div>
 
         <div className="text-center mb-8">
@@ -41,7 +41,7 @@ export function LoginPage() {
           <p className="text-subtitle text-foreground-secondary mt-1">Faça login na sua conta</p>
         </div>
 
-        <form onSubmit={handleSubmit(onSubmit)} noValidate className="flex flex-col gap-5">
+        <form onSubmit={handleSubmit(onSubmit)} noValidate className="flex flex-col gap-3">
           <Input
             label="E-mail"
             type="email"
@@ -80,8 +80,8 @@ export function LoginPage() {
           </button>
         </form>
 
-        <p className="text-center text-caption text-foreground-muted mt-8">
-          © 2026 Isatec Sistemas e Consultoria
+        <p className="text-center text-caption text-foreground-muted mt-3">
+          © {new Date().getFullYear()} Isatec Sistemas e Consultoria
         </p>
       </div>
     </div>
