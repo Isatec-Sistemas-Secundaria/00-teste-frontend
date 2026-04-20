@@ -1,0 +1,5 @@
+{
+  "permissions": {
+    "allow": ["Bash(mkdir -p c:/projetos/00-teste-frontend/public)", "Bash(node -e ' *)"]
+  }
+}
