@@ -1,3 +1,32 @@
+## Entrega - Luis Felipe Luz Laia
+
+Discord: siulsiemanym
+
+### Tecnologias utilizadas
+
+- HTML
+- CSS
+- JavaScript
+
+### Ferramentas Utilizadas
+
+- VisualStudio
+- GitHub
+- Copilot
+
+### Decisões do projeto
+
+A tela foi construida em HTML sem a utilização de frameworks por ser uma tela simples.
+Decidi fazer o modo escuro via toggle de classe no body e aproveitei para fazer com que fique no ultimo tema escolhido pelo usuario via localstorage, no qual não foi solicitado,
+mas quis fazer para mostrar da minha criatividade em melhorar a experiência ao usuario.
+As ferramentas selecionadas são as quais eu mais tenho intimidade, facilitando para a mim a produção das telas.
+
+### Execultar projeto 
+
+Nenhuma extenção necessária, basta abrir o login.html no seu navegador, no meu caso o fire fox, ou se for da sua prefêrencia o liveserver também pode ser utilizado, caso os arquivos
+estejam instalados nos arquivos do seu computador.
+
+
 ## Bem vindos!
 
 Estamos felizes por você estar interessado(a) em integrar nosso time!
