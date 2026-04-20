@@ -1,5 +1,4 @@
-# Teste Front-end
-## Estevan Chicoski Vieira
+# Teste Front-end Estevan Chicoski Vieira
 
 ## Sobre as Tecnologias Usadas
 Desenvolvi usando HTML, CSS e JavaScript puro, mas com uma pequena diferença, utilizei Scss para a estilziação.
