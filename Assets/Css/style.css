@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  transition: 0.2s;
+}
+main .container {
+  width: 28rem;
+  height: 38rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.185);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-top: 6vh;
+  padding-bottom: 1vh;
+}
+main .container .image {
+  width: 75px;
+  height: 75px;
+  background-color: #2563ea;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+}
+main .container form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5vh;
+  padding: 0 4vh;
+}
+main .container form .text {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  padding-bottom: 10px;
+}
+main .container form .text h2 {
+  font-size: 20pt;
+  font-weight: 500;
+}
+main .container form .text p {
+  font-size: 11pt;
+  color: #333333;
+}
+main .container form .input {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 1vh;
+}
+main .container form .input::after {
+  content: "";
+  width: 0%;
+  height: 1px;
+  background-color: #2563ea;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.2s ease-in-out;
+}
+main .container form .input input {
+  padding: 1vh;
+  border: none;
+  outline: none;
+  width: 100%;
+  border-radius: 10px;
+  height: 2.8rem;
+}
+main .container form .input label {
+  color: #333333;
+  font-size: 11pt;
+}
+main .container form .input:focus-within::after, main .container form .input:hover::after {
+  width: 100%;
+}
+main .container form .input input::placeholder {
+  color: #d1d1d1;
+  font-size: 12pt;
+}
+main .container form button {
+  color: #2563ea;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  align-self: flex-end;
+  font-size: 11pt;
+}
+main .container form input[type=submit] {
+  padding: 1.2vh;
+  font-size: 13pt;
+  color: #fff;
+  background: #2563ea;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+main .container form input[type=submit]:hover {
+  opacity: 0.9;
+}
+main .container span {
+  font-size: 9pt;
+  color: #d6d6d6;
+}
+
+#tema {
+  position: absolute;
+  top: 3vh;
+  right: 3vh;
+  padding: 1.2vh;
+  border: none;
+  border-radius: 50%;
+  background-color: #2563ea;
+  font-size: 20pt;
+  cursor: pointer;
+}
+
+.dark {
+  background-color: #111929;
+}
+.dark .container {
+  background-color: #212939;
+}
+.dark .container .image {
+  background-color: rgba(0, 0, 0, 0);
+}
+.dark .container .image img {
+  width: 85px;
+}
+.dark .container form .text h2 {
+  color: #ffffff;
+}
+.dark .container form .text p {
+  color: #cacaca;
+}
+.dark .container form .input label {
+  color: #cacaca;
+}
+.dark .container form .input::after {
+  background-color: #5ea6f3;
+}
+.dark .container form .input input {
+  background-color: #111929;
+}
+.dark .container form .input input::placeholder {
+  color: #cacaca;
+}
+.dark .container form button {
+  color: #5ea6f3;
+}
+.dark .container form input[type=submit] {
+  background-color: #5ea6f3;
+}
+.dark .container span {
+  color: #535666;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+}
+
+$color_primary: #2563ea;
+$color_secondary: #5ea6f3;
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    transition: .2s;
+
+    .container {
+        width: 28rem;
+        height: 38rem;
+        border-radius: 20px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.185);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        padding-top: 6vh;
+        padding-bottom: 1vh;
+
+        .image {
+            width: 75px;
+            height: 75px;
+            background-color: $color_primary;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+        }
+
+        form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 2.5vh;
+            padding: 0 4vh;
+
+            .text {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                gap: 5px;
+                padding-bottom: 10px;
+
+                h2 {
+                    font-size: 20pt;
+                    font-weight: 500;
+                }
+
+                p {
+                    font-size: 11pt;
+                    color: #333333;
+                }
+            }
+
+            .input {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                gap: 1vh;
+
+                &::after {
+                    content: "";
+                    width: 0%;
+                    height: 1px;
+                    background-color: $color_primary;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    transition: .2s ease-in-out;
+                }
+
+                input {
+                    padding: 1vh;
+                    border: none;
+                    outline: none;
+                    width: 100%;
+                    border-radius: 10px;
+                    height: 2.8rem;
+                }
+
+                label {
+                    color: #333333;
+                    font-size: 11pt;
+                }
+
+                &:focus-within::after, &:hover::after {
+                    width: 100%;
+                }
+
+                input::placeholder {
+                    color: #d1d1d1;
+                    font-size: 12pt;
+                }
+            }
+
+            button {
+                color: $color_primary;
+                border: none;
+                background-color: #00000000;
+                cursor: pointer;
+                align-self: flex-end;
+                font-size: 11pt;
+            }
+
+            input[type=submit] {
+                padding: 1.2vh;
+                font-size: 13pt;
+                color: #fff;
+                background: $color_primary;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: .2s ease-in-out;
+
+                &:hover {
+                    opacity: 0.9;
+                }
+            }
+        }
+
+        span {
+            font-size: 9pt;
+            color: #d6d6d6;
+        }
+    }
+}
+
+#tema {
+    position: absolute;
+    top: 3vh;
+    right: 3vh;
+    padding: 1.2vh;
+    border: none;
+    border-radius: 50%;
+    background-color: $color_primary;
+    font-size: 20pt;
+    cursor: pointer;
+}
+
+.dark {
+    background-color: #111929;
+
+    .container {
+        background-color: #212939;
+
+        .image {
+            background-color: #00000000;
+
+            img {
+                width: 85px;
+            }
+        }
+
+        form {
+            .text {
+                h2 {
+                    color: #ffffff;
+                } p {
+                    color: #cacaca;
+                }
+            }
+
+            .input {
+                label {
+                    color: #cacaca;
+                }
+
+                &::after {
+                    background-color: $color_secondary;
+                }
+
+                input {
+                    background-color: #111929;
+                    
+                    &::placeholder {
+                        color: #cacaca;
+                    }
+                }
+            }
+
+            button {
+                color: $color_secondary;
+            }
+
+            input[type=submit] {
+                background-color: $color_secondary;
+            }
+        }
+
+        span {
+            color: #535666;
+        }
+    }
+}
