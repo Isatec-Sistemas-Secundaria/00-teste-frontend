@@ -50,7 +50,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
           )}
         </div>
 
-        {error && <p className="text-caption text-red-500">{error}</p>}
+        <p className="text-caption text-red-500 min-h-2">{error || ''}</p>
       </div>
     );
   },
