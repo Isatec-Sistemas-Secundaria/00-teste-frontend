@@ -1,55 +1,84 @@
-## Bem vindos!
+# Isatec — Tela de Login
 
-Estamos felizes por você estar interessado(a) em integrar nosso time!
+**Discord:** teuspdu7498
 
-Como o número de interessados foi muito grande, vamos aplicar um pequeno teste, bem simples. Com intuito de filtrar os candidatos que só mandaram mensagem por mandar, dos realmente interessados.
+---
 
-## Não se preocupe
+## Sobre o Projeto
 
-Não vamos te pedir muito, o teste consiste apenas em fazer uma tela de login. Simples né? Mas você já vai mostrar pra gente que consegue seguir um fluxo real de trabalho. Com uma demanda real, e material de apoio real.
+Implementação da tela de login da Isatec, com suporte a **tema claro e escuro**, seguindo fielmente o design fornecido. O projeto foi desenvolvido com foco em qualidade de código, desempenho, fidelidade visual e experiência do usuário.
 
-## Como o teste vai funcionar
+---
 
-Você vai criar um fork desse repo, vai executar a demanda, e quando estiver pronto, vai abrir um pr. Isso vai nós indicar que você acabou e que podemos analisar o seu resultado. Simples né?
+## Tecnologias Utilizadas
 
-## A Demanda
+| Tecnologia | Motivo da escolha |
+|---|---|
+| **React 18** | Biblioteca moderna para construção de interfaces, com renderização eficiente e ecossistema sólido |
+| **TypeScript** | Adiciona tipagem estática ao JavaScript, prevenindo erros em tempo de desenvolvimento e tornando o código mais legível e manutenível |
+| **Tailwind CSS** | Permite estilização rápida e consistente diretamente no JSX, sem criar arquivos CSS separados. Facilita a manutenção e evita conflitos de estilos |
+| **Vite** | Ferramenta de build extremamente rápida, com hot reload instantâneo durante o desenvolvimento e build otimizado para produção |
+| **Context API** | Solução nativa do React para gerenciamento de estado global (tema), sem necessidade de bibliotecas externas como Redux |
+| **Fonte Nunito** | Fonte especificada no briefing do projeto, carregada via Google Fonts |
 
-Como mencionado antes você só precisa criar uma tela de login. Aqui está ela:
+---
 
-**Tema claro:**
-![Tema claro](./imagens/00-login/Tela-Claro-naoLogado.jpg)
+## Funcionalidades
 
-**Tema Escuro:**
-![Tema escuro](./imagens/00-login/Tela-Escuro-naoLogado.jpg)
+- ✅ Tema claro e escuro com alternância por botão (salva preferência no localStorage)
+- ✅ Detecção automática do tema preferido do sistema operacional
+- ✅ Validação de formulário com mensagens de erro em português
+- ✅ Mostrar/ocultar senha
+- ✅ Estado de carregamento no botão ao submeter
+- ✅ Design responsivo (funciona em mobile, tablet e desktop)
+- ✅ Acessibilidade (labels, aria-labels, navegação por teclado)
+- ✅ Transições suaves entre temas
 
-> Todas as imagens estão na pasta 'imagens/' para consulta.
+---
 
-Pode usar a tecnologia que estiver confortável para esse teste.
+## Como Executar
 
-### Informações complementares a demanda
+### Pré-requisitos
 
-Tipografia:
+- [Node.js](https://nodejs.org/) versão 16 ou superior
+- npm (vem junto com o Node.js)
 
-- Nunito - font principal
-- fonts secundarias não se aplicam a tela de login
+### Instalação e execução
 
+```bash
+# 1. Clone o repositório (se ainda não fez)
+git clone https://github.com/mathrodriguesdev-arch/00-teste-frontend.git
+cd 00-teste-frontend
 
+# 2. Instale as dependências
+npm install
 
-## O que vai ser avaliado
+# 3. Rode em modo de desenvolvimento
+npm run dev
+```
 
-- similaridade do resultado entregue com as imagens da demanda.
-- performance.
-- qualidade do código.
-- Experiência do usuário (UX).
-- Interatividade.
+Acesse **http://localhost:5173** no seu navegador.
 
-## Entrega
+### Build para produção
 
-Antes de abrir o pr para sinalizar que finalizou o teste, modifique esse README.md Com seu discord para entrarmos em contato. E com uma breve explicação do seu trabalho como: tecnologias usadas, o motivo por trás do uso dessas tecnologias e etc. Explicação do projeto feita por IA vai ser desconsiderada, é necessário que você entenda o que está fazendo.
+```bash
+npm run build
+npm run preview
+```
 
-Também adicione uma sessão explicando como executar seu projeto caso ele não seja só arquivos estáticos com: instalação de dependências, build e etc.
+---
 
-## duvidas
+## Estrutura do Projeto
 
-Qualquer duvida pode perguntar diretamente na publicação: https://discord.com/channels/755483507698172045/1494423687233798267
-
+```
+src/
+├── components/
+│   └── ThemeToggle.tsx     # Botão de alternância de tema
+├── contexts/
+│   └── ThemeContext.tsx    # Gerenciamento global do tema
+├── pages/
+│   └── LoginPage.tsx       # Página de login completa
+├── App.tsx                 # Componente raiz
+├── main.tsx                # Ponto de entrada
+└── index.css               # Estilos globais + Tailwind
+```
