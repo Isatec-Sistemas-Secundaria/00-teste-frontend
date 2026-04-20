@@ -80,7 +80,7 @@ export function LoginPage() {
           </button>
         </form>
 
-        <p className="text-center text-caption text-foreground-muted mt-3">
+        <p className="text-center text-caption text-foreground-muted mt-8">
           © {new Date().getFullYear()} Isatec Sistemas e Consultoria
         </p>
       </div>
