@@ -1,55 +1,39 @@
-## Bem vindos!
+# 🔐 Isatec Login - Sistema de Autenticação Moderno
 
-Estamos felizes por você estar interessado(a) em integrar nosso time!
+> Uma interface de login de alta fidelidade, desenvolvida com React e Tailwind CSS, apresentando suporte nativo a temas (Dark/Light mode) e validação de formulários em tempo real.
 
-Como o número de interessados foi muito grande, vamos aplicar um pequeno teste, bem simples. Com intuito de filtrar os candidatos que só mandaram mensagem por mandar, dos realmente interessados.
+## 🔗 Demonstração
+**Veja o projeto online:** [Acesse aqui](https://00-teste-frontend.vercel.app/)
 
-## Não se preocupe
+---
 
-Não vamos te pedir muito, o teste consiste apenas em fazer uma tela de login. Simples né? Mas você já vai mostrar pra gente que consegue seguir um fluxo real de trabalho. Com uma demanda real, e material de apoio real.
+## 💻 Sobre o Projeto
+Este projeto foi desenvolvido como um teste técnico de front-end para a **Isatec Sistemas e Consultoria**. O foco principal foi criar uma experiência de usuário (UX) moderna e segura, onde o sistema identifica automaticamente a preferência de tema do sistema operacional, permitindo também a troca manual. O código utiliza as melhores práticas de **React Hooks** e **Context API** para um gerenciamento de estado limpo e eficiente.
 
-## Como o teste vai funcionar
+## 🛠️ Tecnologias Utilizadas
+- **React (TypeScript):** Tipagem robusta para maior segurança no desenvolvimento e manutenção.
+- **Tailwind CSS:** Estilização utilitária para garantir rapidez, performance e um design consistente.
+- **Context API:** Gerenciamento de estado global para controle dinâmico do tema (Dark/Light Mode).
+- **Vite:** Ferramenta de build ultra-rápida para o ecossistema React.
+- **Google Fonts (Nunito):** Tipografia selecionada para garantir legibilidade e um aspecto profissional.
 
-Você vai criar um fork desse repo, vai executar a demanda, e quando estiver pronto, vai abrir um pr. Isso vai nós indicar que você acabou e que podemos analisar o seu resultado. Simples né?
+## 🎨 Diferenciais Técnicos
+- **Theme Engine Inteligente:** Persistência no `localStorage` e detecção automática via `matchMedia` (preferência do sistema).
+- **Validação de Formulário Customizada:** Lógica de validação para e-mail e senha com tratamento de erros visual e amigável.
+- **Micro-interações de UI:**
+  - Toggle de visibilidade de senha (ícones dinâmicos).
+  - Estado de *loading* animado no botão de submissão.
+  - Transições suaves (`duration-300`) entre temas para evitar fadiga visual.
+- **Arquitetura de Componentes:** Código modularizado e reutilizável.
 
-## A Demanda
+## 📸 Preview
+![Screenshot do Projeto](./preview-desktop.png)
 
-Como mencionado antes você só precisa criar uma tela de login. Aqui está ela:
+---
 
-**Tema claro:**
-![Tema claro](./imagens/00-login/Tela-Claro-naoLogado.jpg)
+### 👨‍💻 Contato
+**Matheus Rodrigues**
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/matheus-rodrigues-4398423b9) | [![GitHub](https://img.shields.io/badge/GitHub-100000?style=flat-square&logo=github&logoColor=white)](https://github.com/mathrodriguesdev-arch)
 
-**Tema Escuro:**
-![Tema escuro](./imagens/00-login/Tela-Escuro-naoLogado.jpg)
-
-> Todas as imagens estão na pasta 'imagens/' para consulta.
-
-Pode usar a tecnologia que estiver confortável para esse teste.
-
-### Informações complementares a demanda
-
-Tipografia:
-
-- Nunito - font principal
-- fonts secundarias não se aplicam a tela de login
-
-
-
-## O que vai ser avaliado
-
-- similaridade do resultado entregue com as imagens da demanda.
-- performance.
-- qualidade do código.
-- Experiência do usuário (UX).
-- Interatividade.
-
-## Entrega
-
-Antes de abrir o pr para sinalizar que finalizou o teste, modifique esse README.md Com seu discord para entrarmos em contato. E com uma breve explicação do seu trabalho como: tecnologias usadas, o motivo por trás do uso dessas tecnologias e etc. Explicação do projeto feita por IA vai ser desconsiderada, é necessário que você entenda o que está fazendo.
-
-Também adicione uma sessão explicando como executar seu projeto caso ele não seja só arquivos estáticos com: instalação de dependências, build e etc.
-
-## duvidas
-
-Qualquer duvida pode perguntar diretamente na publicação: https://discord.com/channels/755483507698172045/1494423687233798267
-
+---
+© 2026 Isatec Sistemas e Consultoria
