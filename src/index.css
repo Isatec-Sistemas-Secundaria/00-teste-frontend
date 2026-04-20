@@ -1,0 +1,92 @@
+@import 'tailwindcss';
+
+html, body, #root {
+  height: 100%;
+}
+
+ :root {
+  --page-bg: #f4f7fb;
+  --card-bg: #ffffff;
+  --card-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  --text-primary: #646c7a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --input-bg: #ffffff;
+  --input-border: #cccccc32;
+  --input-text: #334155;
+  --input-placeholder: #94a3b8;
+  --link-color: #2963de;
+  --button-bg: #2963de;
+  --button-text: #ffffff;
+  --logo-bg: #2963de;
+ }
+
+[data-theme='dark'] {
+  --page-bg: #111828;
+  --card-bg: #1E2C39;
+  --card-shadow: 0 5px 25px rgba(0, 0, 0, 0.45);
+  --text-primary: #e2e8f0;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --input-bg: #111828;
+  --input-border: #334155;
+  --input-text: #e2e8f0;
+  --input-placeholder: #64748b;
+  --link-color: #93c5fd;
+  --button-bg: #61A5FA;
+  --button-text: #ffffff;
+  --logo-bg: transparent;
+ }
+
+body {
+  margin: 0;
+  transition: background-color 200ms ease, color 200ms ease;
+  background: var(--page-bg);
+  color: var(--text-primary);
+}
+
+*{
+  font-family: 'Nunito', sans-serif;
+}
+
+.theme-card {
+  background: var(--card-bg);
+  box-shadow: var(--card-shadow);
+  color: var(--text-primary);
+}
+
+.theme-label {
+  color: var(--text-secondary);
+}
+
+.theme-input {
+  padding: 0.8rem;
+  justify-content: center;
+  border-radius: 0.5rem;
+  border: 1px solid var(--input-border);
+  background: var(--input-bg);
+  color: var(--input-text);
+  width: 100%;
+  transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease;
+}
+
+.theme-input::placeholder {
+  color: var(--input-placeholder);
+}
+
+.theme-link {
+  color: var(--link-color);
+}
+
+.theme-button {
+  background: var(--button-bg);
+  color: var(--button-text);
+}
+
+.theme-logo {
+  background: var(--logo-bg);
+}
+
+.theme-shell {
+  background: var(--page-bg);
+}
