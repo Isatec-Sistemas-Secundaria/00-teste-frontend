@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap');
+
+body {
+background-color: #f0f2f5;
+font-family: 'Nunito', sans-serif;
+}
+
+.container {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+min-height: 100vh
+}
+
+.card {
+background: rgb(255, 255, 255);
+border-radius: 16px;
+padding: 2rem;
+width: 340px;
+box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+}
+
+.campo {
+margin-bottom: 1rem;
+}
+
+.campo input {
+border: 1px solid #d1d5db;
+border-radius: 8px;
+padding: 10px 12px;
+width: 100%;
+font-size: 13px;
+font-style: normal;
+font-weight: normal;
+box-sizing: border-box;
+}
+
+.campo label {
+display: block;
+margin-bottom: 6px;
+font-size: 13px;
+}
+
+.botao {
+background-color: #2563eb;
+color: white;
+border: none;
+border-radius: 8px;
+padding: 10px;
+width: 100%;
+cursor: pointer;
+box-sizing: border-box;
+}
+
+.senha  {
+text-align: right;
+margin-bottom: 1rem;
+}
+
+.senha a {
+color: #2563eb;
+font-size: 13px;
+text-decoration: none;
+}
+
+.titulo {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin-bottom: 1.5rem;
+}
+
+.titulo h1 {
+font-size: 22px;
+margin-bottom: 2px;
+}
+
+.titulo p {
+font-size: 15px;  
+font-family: sans-serif;
+color: #6b7280;
+}
+
+.rodape {
+text-align: center;
+font-size: 11px;
+color: #9ca3af;
+margin-top: 1rem;
+}
+
+.logo{
+width: 82px;
+height: 82px;
+margin: 0 auto 1rem;
+background-color: #2563eb;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+border: none;
+cursor: pointer;
+}
+
+.logo img {
+width: 75%;
+height: 75%;
+object-fit: contain;
+}
+
+.dark { 
+background-color: #0f172a;
+}
+
+.dark .card {
+background-color: #1e293b;
+box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+}
+
+.dark .titulo h1 {
+color: white;
+}
+
+.dark .titulo p {
+color: #94a3b8;
+}
+
+.dark .campo label {
+color: #94a3b8;
+}
+
+.dark .campo input {
+background-color: #293548;
+border-color: #334155;
+color: white;
+}
+
+.dark .rodape {
+color: #475569;
+}
+
+.dark .logo {
+background-color: transparent;
+}
