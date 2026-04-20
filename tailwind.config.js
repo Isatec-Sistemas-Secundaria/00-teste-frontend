@@ -5,7 +5,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Nunito', 'sans-serif'],
+        sans: ['Nunito Variable', 'Nunito', 'sans-serif'],
       },
       colors: {
         background: 'var(--color-background)',
