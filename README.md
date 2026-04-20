@@ -1,84 +1,39 @@
-# Isatec — Tela de Login
+# 🔐 Isatec Login - Sistema de Autenticação Moderno
 
-**Discord:** teuspdu7498
+> Uma interface de login de alta fidelidade, desenvolvida com React e Tailwind CSS, apresentando suporte nativo a temas (Dark/Light mode) e validação de formulários em tempo real.
 
----
-
-## Sobre o Projeto
-
-Implementação da tela de login da Isatec, com suporte a **tema claro e escuro**, seguindo fielmente o design fornecido. O projeto foi desenvolvido com foco em qualidade de código, desempenho, fidelidade visual e experiência do usuário.
+## 🔗 Demonstração
+**Veja o projeto online:** [Acesse aqui](https://00-teste-frontend.vercel.app/)
 
 ---
 
-## Tecnologias Utilizadas
+## 💻 Sobre o Projeto
+Este projeto foi desenvolvido como um teste técnico de front-end para a **Isatec Sistemas e Consultoria**. O foco principal foi criar uma experiência de usuário (UX) moderna e segura, onde o sistema identifica automaticamente a preferência de tema do sistema operacional, permitindo também a troca manual. O código utiliza as melhores práticas de **React Hooks** e **Context API** para um gerenciamento de estado limpo e eficiente.
 
-| Tecnologia | Motivo da escolha |
-|---|---|
-| **React 18** | Biblioteca moderna para construção de interfaces, com renderização eficiente e ecossistema sólido |
-| **TypeScript** | Adiciona tipagem estática ao JavaScript, prevenindo erros em tempo de desenvolvimento e tornando o código mais legível e manutenível |
-| **Tailwind CSS** | Permite estilização rápida e consistente diretamente no JSX, sem criar arquivos CSS separados. Facilita a manutenção e evita conflitos de estilos |
-| **Vite** | Ferramenta de build extremamente rápida, com hot reload instantâneo durante o desenvolvimento e build otimizado para produção |
-| **Context API** | Solução nativa do React para gerenciamento de estado global (tema), sem necessidade de bibliotecas externas como Redux |
-| **Fonte Nunito** | Fonte especificada no briefing do projeto, carregada via Google Fonts |
+## 🛠️ Tecnologias Utilizadas
+- **React (TypeScript):** Tipagem robusta para maior segurança no desenvolvimento e manutenção.
+- **Tailwind CSS:** Estilização utilitária para garantir rapidez, performance e um design consistente.
+- **Context API:** Gerenciamento de estado global para controle dinâmico do tema (Dark/Light Mode).
+- **Vite:** Ferramenta de build ultra-rápida para o ecossistema React.
+- **Google Fonts (Nunito):** Tipografia selecionada para garantir legibilidade e um aspecto profissional.
 
----
+## 🎨 Diferenciais Técnicos
+- **Theme Engine Inteligente:** Persistência no `localStorage` e detecção automática via `matchMedia` (preferência do sistema).
+- **Validação de Formulário Customizada:** Lógica de validação para e-mail e senha com tratamento de erros visual e amigável.
+- **Micro-interações de UI:**
+  - Toggle de visibilidade de senha (ícones dinâmicos).
+  - Estado de *loading* animado no botão de submissão.
+  - Transições suaves (`duration-300`) entre temas para evitar fadiga visual.
+- **Arquitetura de Componentes:** Código modularizado e reutilizável.
 
-## Funcionalidades
-
-- ✅ Tema claro e escuro com alternância por botão (salva preferência no localStorage)
-- ✅ Detecção automática do tema preferido do sistema operacional
-- ✅ Validação de formulário com mensagens de erro em português
-- ✅ Mostrar/ocultar senha
-- ✅ Estado de carregamento no botão ao submeter
-- ✅ Design responsivo (funciona em mobile, tablet e desktop)
-- ✅ Acessibilidade (labels, aria-labels, navegação por teclado)
-- ✅ Transições suaves entre temas
+## 📸 Preview
+![Screenshot do Projeto](./preview-desktop.png)
 
 ---
 
-## Como Executar
-
-### Pré-requisitos
-
-- [Node.js](https://nodejs.org/) versão 16 ou superior
-- npm (vem junto com o Node.js)
-
-### Instalação e execução
-
-```bash
-# 1. Clone o repositório (se ainda não fez)
-git clone https://github.com/mathrodriguesdev-arch/00-teste-frontend.git
-cd 00-teste-frontend
-
-# 2. Instale as dependências
-npm install
-
-# 3. Rode em modo de desenvolvimento
-npm run dev
-```
-
-Acesse **http://localhost:5173** no seu navegador.
-
-### Build para produção
-
-```bash
-npm run build
-npm run preview
-```
+### 👨‍💻 Contato
+**Matheus Rodrigues**
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/matheus-rodrigues-4398423b9) | [![GitHub](https://img.shields.io/badge/GitHub-100000?style=flat-square&logo=github&logoColor=white)](https://github.com/mathrodriguesdev-arch)
 
 ---
-
-## Estrutura do Projeto
-
-```
-src/
-├── components/
-│   └── ThemeToggle.tsx     # Botão de alternância de tema
-├── contexts/
-│   └── ThemeContext.tsx    # Gerenciamento global do tema
-├── pages/
-│   └── LoginPage.tsx       # Página de login completa
-├── App.tsx                 # Componente raiz
-├── main.tsx                # Ponto de entrada
-└── index.css               # Estilos globais + Tailwind
-```
+© 2026 Isatec Sistemas e Consultoria
