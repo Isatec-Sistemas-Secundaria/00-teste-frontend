@@ -1,4 +1,4 @@
-import logoMonochrome from './logo_monocrome.png';
+import logoMonochrome from './logo_monocrome.webp';
 
 interface IsatecLogoProps {
   size?: number;
