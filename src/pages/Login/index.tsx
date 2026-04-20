@@ -33,7 +33,7 @@ export function LoginPage() {
 
       <div className="w-full max-w-[440px] bg-card border border-card-border rounded-2xl shadow-card px-10 pt-10 pb-3">
         <div className="flex justify-center mb-7">
-          <IsatecLogo size={80} />
+          <IsatecLogo size={96} />
         </div>
 
         <div className="text-center mb-8">
