@@ -1,9 +1,11 @@
 interface InputProps {
     id: string
+    name: string
     type?: string
     value: string
     onChange: (val: string) => void;
     themeContext : any,
+    placeholder?: string,
     error?: string;
 
 
@@ -11,24 +13,26 @@ interface InputProps {
 
 export function FormInputField({
     id,
+    name,
     type,
     value,
     onChange,
     themeContext,
+    placeholder,
     error
     
 }: InputProps){
     return (
         <div className="flex flex-col gap-2">
             <label htmlFor="email" className="text-sm font-medium text-foreground">
-                E-mail
+                {name}
             </label>              
             <input
                 id={id}
                 type={type}
                 value={value}
                 onChange={(e) => onChange(e.target.value)}
-                placeholder=" seu@email.com"
+                placeholder={placeholder ?? ""}
                 className={`w-full px-4 py-3
                     ${themeContext?.theme.type == "light" ? "border " : ""}
                   border-gray-200 rounded-lg 

@@ -73,20 +73,24 @@ export function LoginPage(){
               {/* Campo de Email */}
               <FormInputField
                 id="email"
+                name="E-mail"
                 type="email"
                 value={email}
                 onChange={setEmail}
                 themeContext={themeContext}
+                placeholder="seu@email.com"
                 error={errors.email}
               />
 
               {/* Campo de senha */}
               <FormInputField
                 id="password"
+                name="Senha"
                 type="password"
                 value={password}
                 onChange={setPassword}
                 themeContext={themeContext}
+                placeholder="••••••••"
                 error={errors.password}
               />
 
