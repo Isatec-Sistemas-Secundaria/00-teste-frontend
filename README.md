@@ -33,8 +33,6 @@ Tipografia:
 - Nunito - font principal
 - fonts secundarias não se aplicam a tela de login
 
-
-
 ## O que vai ser avaliado
 
 - similaridade do resultado entregue com as imagens da demanda.
@@ -49,7 +47,49 @@ Antes de abrir o pr para sinalizar que finalizou o teste, modifique esse README.
 
 Também adicione uma sessão explicando como executar seu projeto caso ele não seja só arquivos estáticos com: instalação de dependências, build e etc.
 
+## Entrega — Matheus Ribeiro
+
+**Discord:** \_Matheus#7920  
+**GitHub:** https://github.com/MatheusSlvRibeiro/
+
+### Sobre o projeto
+
+Stack: **React + TypeScript + Vite + Tailwind CSS**
+
+**Tailwind:** Neste projeto utilizei Tailwind por praticidade e otimização de tempo de desenvolvimento. Nas configurações temos `class` + CSS custom properties: tokens de cor definidos uma vez em `:root/.dark`, assim os componentes não precisam de prefixo `dark:` nas classes de cor.
+
+**Fontsource** em vez de importar ou baixar manualmente no Google Fonts: fonte bundlada pelo Vite, sem requisição externa garantindo otimização pelo PageSpeed.
+
+**Logo convertida de PNG (1.3MB) para WebP lossless (168KB):** mesmo formato suporta transparência e a conversão lossless garante zero perda de qualidade, com 87% de redução no tamanho.
+
+**Zod schema:** valida o formulário com mensagens em PT-BR, garantindo consistência dos dados.
+
+**Script anti-flash no `<head>`:** executado antes do React hidratar, lê o `localStorage` e o `prefers-color-scheme` do sistema operacional para aplicar o tema correto imediatamente, evita o efeito de piscar ao carregar a página.
+
+**ESLint + Prettier + Husky:** lint-staged bloqueia commit se código fora do padrão, já garante consistência do código sem overhead de configuração de testes para uma única tela. O hook `pre-commit` roda o lint-staged automaticamente, qualquer commit com código fora do padrão é bloqueado antes de entrar no repositório.
+
+**React-router-dom:** Usado para criar e organizar as rotas.
+
+**Path aliases:** permite consistência em imports ao longo do projeto.
+
+### Como executar
+
+**Pré-requisito:** Node.js 18+
+
+```bash
+# Instalar dependências
+npm install
+
+# Rodar em desenvolvimento
+npm run dev
+
+# Build de produção
+npm run build
+
+# Preview do build
+npm run preview
+```
+
 ## duvidas
 
 Qualquer duvida pode perguntar diretamente na publicação: https://discord.com/channels/755483507698172045/1494423687233798267
-

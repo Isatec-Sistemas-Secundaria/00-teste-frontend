@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        /* Page */
+        --color-background: #f0f2f5;
+
+        /* Card */
+        --color-card: #ffffff;
+        --color-card-border: #e2e8f0;
+        --color-card-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.08);
+
+        /* Text */
+        --color-foreground: #1e293b;
+        --color-foreground-secondary: #64748b;
+        --color-foreground-muted: #94a3b8;
+        --color-label: #374151;
+
+        /* Input */
+        --color-input-bg: #ffffff;
+        --color-input-border: #d1d5db;
+        --color-input-placeholder: #94a3b8;
+
+        /* Brand / Primary */
+        --color-primary: #3b6cf8;
+        --color-primary-hover: #2d5de0;
+        --color-primary-foreground: #ffffff;
+    }
+
+    .dark {
+        /* Page */
+        --color-background: #0f172a;
+
+        /* Card */
+        --color-card: #1e293b;
+        --color-card-border: #2d3f55;
+        --color-card-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.4);
+
+        /* Text */
+        --color-foreground: #f1f5f9;
+        --color-foreground-secondary: #94a3b8;
+        --color-foreground-muted: #475569;
+        --color-label: #94a3b8;
+
+        /* Input */
+        --color-input-bg: #162032;
+        --color-input-border: #334155;
+        --color-input-placeholder: #475569;
+
+        /* Brand / Primary */
+        --color-primary: #4f7bfa;
+        --color-primary-hover: #3b6cf8;
+        --color-primary-foreground: #ffffff;
+    }
+
+    body {
+        @apply font-sans bg-background text-foreground;
+    }
+}
