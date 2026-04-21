@@ -1,0 +1,98 @@
+
+body{
+    background-color: #F9FAFC;    
+}
+
+
+
+.formcard{
+    font-family: 'Nunito';
+    width: 300px;
+    height: 500px;
+    box-shadow: -1px 2px 16px 0px rgba(0,0,0,0.5);
+    -webkit-box-shadow: -1px 2px 16px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: -1px 2px 16px 0px rgba(0,0,0,0.5);
+}
+
+.formcard .card-title{
+    font-family: 'Nunito';
+    font-weight: 600;
+}
+
+.card-subtitle{
+    font-size: smaller;
+
+}
+
+.button{
+    width: 16rem;
+    background-color: #2563EA;
+    color: aliceblue;
+    font-family: 'Nunito';
+}
+
+.button:hover{
+    background-color: #6293fd;
+}
+
+.toggler-eye{
+    color: black;
+}
+
+.carddiv{
+    margin-top: 10%;
+}
+
+.logo-container {
+    width: 50px;           
+    height: 50px;          
+    background-color: #1C5ACB; 
+    border-radius: 50%;     
+    display: flex;          
+    justify-content: center; 
+    align-items: center;   
+    margin: 0 auto;
+    box-shadow: -1px 2px 16px 0px rgba(0,0,0,0.5);
+    -webkit-box-shadow: -1px 2px 16px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: -1px 2px 16px 0px rgba(0,0,0,0.5);          
+}
+
+.logo-icon {
+    width: 75%;           
+    height: auto;        
+}
+
+.form-font{
+    font-size: 10px;
+}
+
+.form-font2{
+    font-size: 12px;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+
+.input-group .form-control {
+    border-right: none;
+}
+
+.input-group .btn {
+    border-left: none;
+    background-color: #fff; 
+    border-color: #dee2e6;  
+    color: #6c757d;         
+}
+
+.text-b{
+    font-size: smaller;
+    color: #bdbebf;
+}
+
+

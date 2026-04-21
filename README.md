@@ -53,3 +53,10 @@ Também adicione uma sessão explicando como executar seu projeto caso ele não 
 
 Qualquer duvida pode perguntar diretamente na publicação: https://discord.com/channels/755483507698172045/1494423687233798267
 
+
+## Rodando o código
+
+Abra o arquivo index.html no seu navegador para visualizar a página.
+
+## Nick Discord
+Discord do candidato: glitch_41
