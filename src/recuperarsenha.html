@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="./Css/style.css">
+</head>
+<header class="">
+    <div class="d-flex justify-content-end mt-2 me-4">
+        <button id="btn-tema" class="btn btn-outline-secondary">
+            <i id="icone-tema" class="fa-solid fa-moon"></i>
+        </button>
+    </div>
+</header>
+
+<body class="bg-body text-body">
+
+    <div class="carddiv col-12 d-flex justify-content-center mt-5">
+        <div class="formcard card text-center mb-3">
+            <div class="card-body">
+                <div class="logo-container mt-4">
+                    <img src="imagens/logo_monocrome.png" alt="Logo" class="logo-icon">
+                </div>
+
+                <div class="mb-4">
+                    <h5 class="card-title mt-5">Recuperar Senha</h5>
+                    <p class="card-text card-subtitle">Digite o E-mail com o qual você se cadastrou</p>
+                </div>
+
+                <form class="needs-validation" novalidate>
+                    <div class="mb-3">
+                        <label for="validationCustom01"
+                            class="form-font form-label d-flex justify-content-start">E-mail</label>
+                        <input type="email" class="form-control form-font2" id="validationCustom01"
+                            placeholder="seu@email.com" required>
+                        <div class="invalid-feedback text-start">Por favor, insira um e-mail válido.</div>
+                    </div>
+                    <div class="mb-5">
+                        <button type="submit" class="button btn btn-primary w-100"
+                            onclick="alert('Email enviado!')">Enviar código de recuperação</button>
+                    </div>
+
+                    <p class="text-b mt-9">© 2026 Isatec e Consultoria</p>
+                </form>
+            </div>
+            </form>
+        </div>
+    </div>
+
+
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+<footer class="">
+
+</footer>
+
+</html>
