@@ -6,23 +6,41 @@ import LogoDark from "../../assets/logo-dark.svg";
 import LoadingIcon from "../../assets/loading-icon.svg";
 import { ThemeContext } from "../../context/ThemeContext";
 import { LightDarkButton } from "../../components/LightDarkButton/LightDarkButton";
+import { FormInputField } from "../../components/FormInputField/FormInputField";
+import { validateEmail, validatePassword } from "../../utils/form_validations";
 
 
 export function LoginPage(){
 
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+    const [errors, setErrors] = useState<{ email?: string; password?: string }>({});
     const [sending, setSending] = useState(false)
     const themeContext = useContext(ThemeContext)
 
     // O App não envia o formulário então essa função é só pra mostrar o loading icon caso ele fosse enviado.
-    const handleSubmit = async (e: React.FormEvent) => {
-      e.preventDefault()
-      setSending(true);
-      setTimeout(() => {
+    
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+
+        // Executa as validações da utils
+        const emailError = validateEmail(email);
+        const passwordError = validatePassword(password);
+
+        if (emailError || passwordError) {
+            setErrors({ email: emailError, password: passwordError });
+            return;
+        }
+
+        // Se chegou aqui, está tudo certo
+        setErrors({});
+        setSending(true);
+        setTimeout(() => {
         setSending(false);
       }, 2000);
-    }
+    };
+
+    
 
     return (
       <div className="min-h-screen flex items-center justify-center p-4 bg-(--bg1) relative">
@@ -41,58 +59,36 @@ export function LoginPage(){
           ">
             <form onSubmit={handleSubmit} className="flex flex-col gap-6">
               
-              {/* Imagem, título e subtítulo */}
+              {/* Imagem*/}
               <div className="w-full flex items-center justify-center p-4">
                 <img src={themeContext?.theme.type =="light"? LogoWhite : LogoDark} width={92} alt="Logo" />
               </div>
+
+              {/* Título e subtítulo  */}
               <div className="w-full flex flex-col items-center justify-center">
                 <h1 className="text-2xl font-semibold">Bem-vindo</h1>
                 <p className="text-">Faça login na sua conta</p>
               </div>
 
               {/* Campo de Email */}
-              <div className="flex flex-col gap-2">
-                <label htmlFor="email" className="text-sm font-medium text-foreground">
-                  E-mail
-                </label>              
-                <input
-                  id="email"
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder=" seu@email.com"
-                  required
-                  className={`w-full px-4 py-3
-                    ${themeContext?.theme.type == "light" ? "border " : ""}
-                    border-gray-200 rounded-lg 
-                    focus:outline-none focus:ring-2 ring-[#2563eb] 
-                    ${themeContext?.theme.type == "light" ? "bg-(--bg2)": "bg-(--bg1)"}
-                  `}
-                />
-              </div>
+              <FormInputField
+                id="email"
+                type="email"
+                value={email}
+                onChange={setEmail}
+                themeContext={themeContext}
+                error={errors.email}
+              />
 
               {/* Campo de senha */}
-              <div className="flex flex-col gap-2">
-                <div className="flex items-center justify-between">
-                  <label htmlFor="password" className="text-sm font-medium text-foreground">
-                    Senha
-                  </label>
-                </div>
-                <input
-                  id="password"
-                  type="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  placeholder="••••••••"
-                  required
-                  className={`w-full px-4 py-3
-                    ${themeContext?.theme.type == "light" ? "border " : ""}
-                    border-gray-200 rounded-lg 
-                    focus:outline-none focus:ring-2 ring-[#2563eb] 
-                    ${themeContext?.theme.type == "light" ? "bg-(--bg2)": "bg-(--bg1)"}
-                  `}
-                />
-              </div>
+              <FormInputField
+                id="password"
+                type="password"
+                value={password}
+                onChange={setPassword}
+                themeContext={themeContext}
+                error={errors.password}
+              />
 
               <div className="flex items-center justify-between">
                 <div className="flex flex-row items-center gap-2">                  
