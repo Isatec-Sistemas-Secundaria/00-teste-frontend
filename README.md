@@ -66,7 +66,7 @@ Stack: **React + TypeScript + Vite + Tailwind CSS**
 
 **Script anti-flash no `<head>`:** executado antes do React hidratar, lê o `localStorage` e o `prefers-color-scheme` do sistema operacional para aplicar o tema correto imediatamente, evita o efeito de piscar ao carregar a página.
 
-**ESLint + Prettier + Husky:** lint-staged bloqueia commit se código fora do padrão, já garante consistência do código sem overhead de configuração de testes para uma única tela.
+**ESLint + Prettier + Husky:** lint-staged bloqueia commit se código fora do padrão, já garante consistência do código sem overhead de configuração de testes para uma única tela. O hook `pre-commit` roda o lint-staged automaticamente, qualquer commit com código fora do padrão é bloqueado antes de entrar no repositório.
 
 **React-router-dom:** Usado para criar e organizar as rotas.
 
