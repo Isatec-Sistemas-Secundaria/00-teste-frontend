@@ -1,5 +1,11 @@
 {
-  "permissions": {
-    "allow": ["Bash(mkdir -p c:/projetos/00-teste-frontend/public)", "Bash(node -e ' *)"]
-  }
+    "permissions": {
+        "allow": [
+            "Bash(mkdir -p c:/projetos/00-teste-frontend/public)",
+            "Bash(node -e ' *)",
+            "Bash(grep -rn \"//\" c:/projetos/00-teste-frontend/index.html c:/projetos/00-teste-frontend/tailwind.config.js c:/projetos/00-teste-frontend/eslint.config.js)",
+            "Bash(grep -rn \"<!--\\\\|{/\\\\*\\\\|^\\\\s*//\" c:/projetos/00-teste-frontend/src c:/projetos/00-teste-frontend/index.html c:/projetos/00-teste-frontend/tailwind.config.js c:/projetos/00-teste-frontend/eslint.config.js c:/projetos/00-teste-frontend/vite.config.ts --include=\"*.tsx\" --include=\"*.ts\" --include=\"*.js\" --include=\"*.html\" --include=\"*.css\")"
+        ],
+        "additionalDirectories": ["c:\\projetos\\00-teste-frontend"]
+    }
 }

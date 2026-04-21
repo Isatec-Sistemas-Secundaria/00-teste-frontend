@@ -33,8 +33,6 @@ Tipografia:
 - Nunito - font principal
 - fonts secundarias não se aplicam a tela de login
 
-
-
 ## O que vai ser avaliado
 
 - similaridade do resultado entregue com as imagens da demanda.
@@ -52,4 +50,3 @@ Também adicione uma sessão explicando como executar seu projeto caso ele não 
 ## duvidas
 
 Qualquer duvida pode perguntar diretamente na publicação: https://discord.com/channels/755483507698172045/1494423687233798267
-

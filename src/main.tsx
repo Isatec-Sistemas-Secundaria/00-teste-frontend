@@ -7,11 +7,11 @@ import '@fontsource-variable/nunito';
 import '@/styles/index.css';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <ThemeProvider>
-        <AppRoutes />
-      </ThemeProvider>
-    </BrowserRouter>
-  </React.StrictMode>,
+    <React.StrictMode>
+        <BrowserRouter>
+            <ThemeProvider>
+                <AppRoutes />
+            </ThemeProvider>
+        </BrowserRouter>
+    </React.StrictMode>,
 );
