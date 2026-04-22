@@ -1,4 +1,6 @@
 # Teste Tecnico
+**Discord: ton_santos.**
+
 
 Esse teste foi feito com as seguintes tecnologias:
 
