@@ -53,3 +53,11 @@ Também adicione uma sessão explicando como executar seu projeto caso ele não 
 
 Qualquer duvida pode perguntar diretamente na publicação: https://discord.com/channels/755483507698172045/1494423687233798267
 
+Discord: darth_revam
+
+As tecnologias que eu utilizei foram bem simples: JavaScript puro, CSS3, HTML5 e um agente de IA local (no meu caso o Qwen 3.6-35b). A principal razão do uso destas tecnologias foi maximizar a eficiência e entregar da forma mais idêntica possível o pedido, usando CSS e HTML para o visual, o JS para a lógica por trás das interações e a IA para extrair com precisão todos os elementos presentes nas imagens de referência e entregar de formas o mais idêntica possível a tela de loguin. Segue abaixo as informações para login:
+
+
+
+dev@naverokire.com / password123
+
