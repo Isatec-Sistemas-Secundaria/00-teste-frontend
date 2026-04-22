@@ -1,55 +1,79 @@
-## Bem vindos!
-
-Estamos felizes por você estar interessado(a) em integrar nosso time!
-
-Como o número de interessados foi muito grande, vamos aplicar um pequeno teste, bem simples. Com intuito de filtrar os candidatos que só mandaram mensagem por mandar, dos realmente interessados.
-
-## Não se preocupe
-
-Não vamos te pedir muito, o teste consiste apenas em fazer uma tela de login. Simples né? Mas você já vai mostrar pra gente que consegue seguir um fluxo real de trabalho. Com uma demanda real, e material de apoio real.
-
-## Como o teste vai funcionar
-
-Você vai criar um fork desse repo, vai executar a demanda, e quando estiver pronto, vai abrir um pr. Isso vai nós indicar que você acabou e que podemos analisar o seu resultado. Simples né?
-
-## A Demanda
-
-Como mencionado antes você só precisa criar uma tela de login. Aqui está ela:
+# RESULTADO FINAL
 
 **Tema claro:**
-![Tema claro](./imagens/00-login/Tela-Claro-naoLogado.jpg)
+![Tema claro](./imagens/resultado/Resultado-light.png)
 
 **Tema Escuro:**
-![Tema escuro](./imagens/00-login/Tela-Escuro-naoLogado.jpg)
+![Tema escuro](./imagens/resultado/Resultado-dark.png)
 
-> Todas as imagens estão na pasta 'imagens/' para consulta.
+# COMO RODAR O PROJETO
 
-Pode usar a tecnologia que estiver confortável para esse teste.
+## Opção normal
 
-### Informações complementares a demanda
+Para rodar o projeto (a versão do node é a 22.22.0 mas qualquer uma acima de 20 deve funcionar sem problemas)
+se tiver ou nvm use o comando abaixo, se não tiver apenas instale a versão certa do node.
 
-Tipografia:
+```bash
+nvm install 22.22.0
+```
+### no diretório do projeto.
 
-- Nunito - font principal
-- fonts secundarias não se aplicam a tela de login
+Para instalar as dependencias:
+```bash
+npm install
+```
+
+```bash
+npm run dev
+```
+Com isso o projeto estará rodando em `http://localhost:5173/`.
 
 
 
-## O que vai ser avaliado
+## Opção Docker
 
-- similaridade do resultado entregue com as imagens da demanda.
-- performance.
-- qualidade do código.
-- Experiência do usuário (UX).
-- Interatividade.
+### se tiver o docker na máquina rode os seguintes comandos no diretório do projeto:
 
-## Entrega
 
-Antes de abrir o pr para sinalizar que finalizou o teste, modifique esse README.md Com seu discord para entrarmos em contato. E com uma breve explicação do seu trabalho como: tecnologias usadas, o motivo por trás do uso dessas tecnologias e etc. Explicação do projeto feita por IA vai ser desconsiderada, é necessário que você entenda o que está fazendo.
+```bash
+docker build -t test-front .
+```
 
-Também adicione uma sessão explicando como executar seu projeto caso ele não seja só arquivos estáticos com: instalação de dependências, build e etc.
+```bash
+docker run -d -p 8080:80 test-front
+```
 
-## duvidas
+Com isso o projeto estará rodando em `http://localhost:8080/`.
 
-Qualquer duvida pode perguntar diretamente na publicação: https://discord.com/channels/755483507698172045/1494423687233798267
 
+
+## Opção Docker e Makefile
+
+### se tiver o Docker e Makefile na máquina rode apenas o seguinte comando no diretório do projeto:
+
+```bash
+make do-it-all
+```
+
+Com isso o projeto estará rodando em `http://localhost:8080/`.
+
+
+
+# EXPLICANDO O PROJETO
+
+O projeto foi feito em Vite React.
+
+Eu usei tailwind para maior agilidade no desenvolvimento mas ainda uso arquivos css para partes com um css bem mais robusto Ex: a parte do botão de switch light e dark mode.
+
+Tanto o tailwind quanto a font exigida foram instaladas nas dependencias do node_modules evitando requests desnecessárias para bibliotecas de fora.
+
+Eu uso um hook de useContext para trabalhar com o tema de dark e light mode.
+Eu prefiro dessa forma pois assim vc tem as cores, o theme já definido em um lugar e apenas reutiliza em todas as páginas (eu sei que esse app só tem 1 página mas desse jeito é melhor para um aplicativo que irá crescer)
+
+O local Storage serve apenas como uma forma de guardar a preferência (light ou dark) para visitas futuras.
+
+Light mode é o valor default da aplicação, se o localStorage.getItem("theme") não tiver nada ou algum valor diferente de "light" ou "dark" ele vai definir automaticamente o light mode.
+
+
+### discord: rodrigo9756 ou rodrigo9756#3503
+### E-mail: rodrigotmt89@gmail.com
