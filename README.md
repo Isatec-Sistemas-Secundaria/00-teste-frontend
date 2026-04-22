@@ -1,55 +1,55 @@
-## Bem vindos!
+# Teste Tecnico
 
-Estamos felizes por você estar interessado(a) em integrar nosso time!
+Esse teste foi feito com as seguintes tecnologias:
 
-Como o número de interessados foi muito grande, vamos aplicar um pequeno teste, bem simples. Com intuito de filtrar os candidatos que só mandaram mensagem por mandar, dos realmente interessados.
+- React
+Escolhi o react pelo meu conhecimento prévio na lib e pelo seu potencial em criar componentes que se encaixa perfeitamente na proposta.
 
-## Não se preocupe
+- TailwindCss
+Uma grande aliada para escrever o css da página de maneira estratégica, pois devido as suas classes customizáveis eu ganho bastante tempo e clareza no desenvolvimento dos styles.
 
-Não vamos te pedir muito, o teste consiste apenas em fazer uma tela de login. Simples né? Mas você já vai mostrar pra gente que consegue seguir um fluxo real de trabalho. Com uma demanda real, e material de apoio real.
+- Vite
+Assim como o react, escolhi pela familiaridade e pela sua capacidade de acelerar o build e facilitar o desenvolvimento.
 
-## Como o teste vai funcionar
+- Typescript
+Mesmo sendo uma simples tela de login, eu sempre acho que o ts ajuda muito a desenvolver os códigos ao dar menos chance ao erro.
 
-Você vai criar um fork desse repo, vai executar a demanda, e quando estiver pronto, vai abrir um pr. Isso vai nós indicar que você acabou e que podemos analisar o seu resultado. Simples né?
+- Zod + React-rook-form
+A dupla perfeita que eu costumo usar para validação de formulários e tratamento de erros.
 
-## A Demanda
+- TwMerge + clsx
+Mesmo sendo um projeto pequeno eu decidi usar essa dupla pelo fato de ter componentizado quase tudo e com eles eu posso evitar possiveis erros de sobrescrita das classes do tailwind.
 
-Como mencionado antes você só precisa criar uma tela de login. Aqui está ela:
+## Agradecimentos
 
-**Tema claro:**
-![Tema claro](./imagens/00-login/Tela-Claro-naoLogado.jpg)
-
-**Tema Escuro:**
-![Tema escuro](./imagens/00-login/Tela-Escuro-naoLogado.jpg)
-
-> Todas as imagens estão na pasta 'imagens/' para consulta.
-
-Pode usar a tecnologia que estiver confortável para esse teste.
-
-### Informações complementares a demanda
-
-Tipografia:
-
-- Nunito - font principal
-- fonts secundarias não se aplicam a tela de login
+Foi uma ótima forma de treinar a criação de tela de login, e mesmo sendo bem simples consegui deixar de uma forma escalonável. Agradeço pela oportunidada.
 
 
+## Instalação
 
-## O que vai ser avaliado
+Clone o repositório:
 
-- similaridade do resultado entregue com as imagens da demanda.
-- performance.
-- qualidade do código.
-- Experiência do usuário (UX).
-- Interatividade.
+```bash
+git clone https://github.com/wellingtonVieiraSantos/isatec-teste-frontend
+```
 
-## Entrega
+Acesse a pasta do projeto:
 
-Antes de abrir o pr para sinalizar que finalizou o teste, modifique esse README.md Com seu discord para entrarmos em contato. E com uma breve explicação do seu trabalho como: tecnologias usadas, o motivo por trás do uso dessas tecnologias e etc. Explicação do projeto feita por IA vai ser desconsiderada, é necessário que você entenda o que está fazendo.
+```bash
+cd isatec-teste-frontend
+```
 
-Também adicione uma sessão explicando como executar seu projeto caso ele não seja só arquivos estáticos com: instalação de dependências, build e etc.
+Instale as dependências:
 
-## duvidas
+```bash
+npm install
+# ou
+yarn install
+```
 
-Qualquer duvida pode perguntar diretamente na publicação: https://discord.com/channels/755483507698172045/1494423687233798267
+Rode o projeto
+
+```bash
+pnpm dev
+```
 

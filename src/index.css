@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+@import "tailwindcss";
+
+
+:root {
+  --bg: #F9FAFC;
+  --fg: #202129;
+  --fg-sec: #C3C4CA; 
+  --card: #FFFFFF; 
+  --border:#C3C4CA;
+  --accent: #6E83C6;
+  --accent-bg: #2563EA;
+  --danger: #EF4444;
+  --success: #22C55E;
+
+  --shadow: rgba(0, 0, 0, 0.1) 0px 0px 15px 8px;
+
+  --nunito: 'Nunito', sans-serif;
+
+  font-size: 18px;
+  font-family: var(--nunito);
+  letter-spacing: 0.5px;
+  color-scheme: light dark;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111828;
+    --fg: #DEE4E6;
+    --fg-sec: #606777; 
+    --card: #202938; 
+    --border:#273140;
+    --accent: #6888B2;
+    --accent-bg: #60A5FA;
+    --danger: #f36060;
+    --success: #28e06c;
+
+    --shadow: rgba(0, 0, 0, 0.1) 0px 0px 15px 15px;
+  }
+}
+
+
+
+
