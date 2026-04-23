@@ -6,8 +6,9 @@
   --font-mono: monospace;
 }
 
-* {
 
+
+* {
     box-sizing: border-box;
     font-family: var(--font-sans);
 }
