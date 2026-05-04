@@ -1,55 +1,73 @@
-## Bem vindos!
+# React + TypeScript + Vite
 
-Estamos felizes por você estar interessado(a) em integrar nosso time!
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Como o número de interessados foi muito grande, vamos aplicar um pequeno teste, bem simples. Com intuito de filtrar os candidatos que só mandaram mensagem por mandar, dos realmente interessados.
+Currently, two official plugins are available:
 
-## Não se preocupe
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-Não vamos te pedir muito, o teste consiste apenas em fazer uma tela de login. Simples né? Mas você já vai mostrar pra gente que consegue seguir um fluxo real de trabalho. Com uma demanda real, e material de apoio real.
+## React Compiler
 
-## Como o teste vai funcionar
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-Você vai criar um fork desse repo, vai executar a demanda, e quando estiver pronto, vai abrir um pr. Isso vai nós indicar que você acabou e que podemos analisar o seu resultado. Simples né?
+## Expanding the ESLint configuration
 
-## A Demanda
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-Como mencionado antes você só precisa criar uma tela de login. Aqui está ela:
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
-**Tema claro:**
-![Tema claro](./imagens/00-login/Tela-Claro-naoLogado.jpg)
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
 
-**Tema Escuro:**
-![Tema escuro](./imagens/00-login/Tela-Escuro-naoLogado.jpg)
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
 
-> Todas as imagens estão na pasta 'imagens/' para consulta.
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-Pode usar a tecnologia que estiver confortável para esse teste.
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
-### Informações complementares a demanda
-
-Tipografia:
-
-- Nunito - font principal
-- fonts secundarias não se aplicam a tela de login
-
-
-
-## O que vai ser avaliado
-
-- similaridade do resultado entregue com as imagens da demanda.
-- performance.
-- qualidade do código.
-- Experiência do usuário (UX).
-- Interatividade.
-
-## Entrega
-
-Antes de abrir o pr para sinalizar que finalizou o teste, modifique esse README.md Com seu discord para entrarmos em contato. E com uma breve explicação do seu trabalho como: tecnologias usadas, o motivo por trás do uso dessas tecnologias e etc. Explicação do projeto feita por IA vai ser desconsiderada, é necessário que você entenda o que está fazendo.
-
-Também adicione uma sessão explicando como executar seu projeto caso ele não seja só arquivos estáticos com: instalação de dependências, build e etc.
-
-## duvidas
-
-Qualquer duvida pode perguntar diretamente na publicação: https://discord.com/channels/755483507698172045/1494423687233798267
-
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
