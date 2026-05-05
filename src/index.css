@@ -1,1 +1,30 @@
-@import 'tailwindcss';
+@import "tailwindcss";
+
+@theme {
+  --color-surface-primary: var(--bg);
+  --color-surface-card: var(--card);
+  --color-content-main: var(--text);
+  --color-content-muted: var(--muted);
+  --color-accent: var(--primary);
+}
+
+:root {
+  --bg: #ffffff;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --primary: #3f93e2;
+}
+
+.dark {
+  --bg: #151d2d;
+  --card: #212939;
+  --text: #ffffff;
+  --muted: #94a3b8;
+  --primary: #3f93e2;
+}
+
+body {
+  @apply bg-surface-primary text-content-main antialiased transition-colors duration-300;
+  font-family: 'Nunito', sans-serif;
+}
