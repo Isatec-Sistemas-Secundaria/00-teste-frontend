@@ -13,8 +13,9 @@ export function Input({ label, id, ...rest }: InputProps) {
       </label>
       <input
         id={id}
-        className="w-full px-4 py-2 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-surface-primary text-content-main focus:outline-none focus:ring-2 focus:ring-accent transition-all placeholder:text-zinc-500"
+        className="w-full px-4 py-2 rounded-lg border border-zinc-200 dark:border-zinc-700 bg-surface-primary text-content-main focus:outline-none focus:ring-2 focus:ring-accent transition-all placeholder:text-zinc-400 dark:placeholder:text-zinc-500"
         {...rest}
+        required
       />
     </div>
   )
