@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface-primary: var(--bg);
+  --color-surface-card: var(--card);
+  --color-content-main: var(--text);
+  --color-content-muted: var(--muted);
+  --color-accent: var(--primary);
+  --shadow-login: var(--shadow-dark);
+}
+
+:root {
+  --bg: #ffffff;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --primary: #3f93e2;
+  --shadow-dark: 0 0 25px 5px rgba(15, 23, 42, 0.15);
+}
+
+.dark {
+  --bg: #151d2d;
+  --card: #212939;
+  --text: #ffffff;
+  --muted: #94a3b8;
+  --primary: #3f93e2;
+  --shadow-dark: 0 0 35px 4px rgba(0, 0, 0, 0.6);
+}
+
+body {
+  @apply bg-surface-primary text-content-main antialiased transition-colors duration-300;
+  font-family: 'Nunito', sans-serif;
+}
+
+@variant dark (&:where(.dark, .dark *));
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px var(--bg) inset !important;
+  -webkit-text-fill-color: var(--text) !important;
+  caret-color: var(--text);
+  transition: background-color 5000s ease-in-out 0s;
+}
