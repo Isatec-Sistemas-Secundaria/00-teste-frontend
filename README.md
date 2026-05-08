@@ -1,7 +1,7 @@
 # RESULTADO
 
 **Tema claro:**
-![Tema claro](./imagens/resultado/Resultado_light.png)
+![Tema claro](./imagens/resultado/Resultado_Light.png)
 
 **Tema Escuro:**
 ![Tema escuro](./imagens/resultado/Resultado_dark.png)
