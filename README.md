@@ -49,6 +49,8 @@ Antes de abrir o pr para sinalizar que finalizou o teste, modifique esse README.
 
 Também adicione uma sessão explicando como executar seu projeto caso ele não seja só arquivos estáticos com: instalação de dependências, build e etc.
 
+**Discord: [villagedanovaiguasu](https://discord.com/users/341268596212760590)**
+
 ## duvidas
 
 Qualquer duvida pode perguntar diretamente na publicação: https://discord.com/channels/755483507698172045/1494423687233798267
