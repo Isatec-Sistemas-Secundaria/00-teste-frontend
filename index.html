@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Tela de login desenvolvida para o teste frontend."
+    />
+    <title>Login | Isatec Sistemas e Consultoria</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="login-page">
+      <section class="login-card" aria-labelledby="login-title">
+        <button
+          class="theme-toggle"
+          type="button"
+          aria-label="Alternar para tema escuro"
+          aria-pressed="false"
+          title="Alternar tema"
+        >
+          <svg
+            class="theme-icon theme-icon--moon"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              d="M21 14.3A7.8 7.8 0 0 1 9.7 3a8.9 8.9 0 1 0 11.3 11.3Z"
+            />
+          </svg>
+          <svg
+            class="theme-icon theme-icon--sun"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2v2.2M12 19.8V22M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2 12h2.2M19.8 12H22M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6" />
+          </svg>
+        </button>
+
+        <div class="brand-mark" aria-hidden="true">
+          <img src="./imagens/logo_monocrome.png" alt="" />
+        </div>
+
+        <header class="login-header">
+          <h1 id="login-title">Bem-vindo</h1>
+          <p id="login-subtitle">Faça login na sua conta</p>
+        </header>
+
+        <form class="login-form auth-form is-active" data-panel="login" novalidate>
+          <div class="field">
+            <label for="email">E-mail</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              autocapitalize="none"
+              inputmode="email"
+              maxlength="254"
+              pattern="^[^\s@]+@[^\s@]+\.[^\s@]{2,}$"
+              placeholder="seu@email.com"
+              spellcheck="false"
+              aria-describedby="email-error"
+              required
+            />
+            <span class="field-error" id="email-error"></span>
+          </div>
+
+          <div class="field">
+            <label for="password">Senha</label>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              autocomplete="current-password"
+              autocapitalize="none"
+              autocorrect="off"
+              maxlength="128"
+              minlength="8"
+              placeholder="••••••••"
+              spellcheck="false"
+              aria-describedby="password-error"
+              required
+            />
+            <span class="field-error" id="password-error"></span>
+          </div>
+
+          <label class="bot-field" for="company">
+            Empresa
+            <input
+              id="company"
+              name="company"
+              type="text"
+              autocomplete="off"
+              tabindex="-1"
+            />
+          </label>
+
+          <button
+            class="text-button forgot-link"
+            type="button"
+            aria-controls="recovery-form"
+          >
+            Esqueceu a senha?
+          </button>
+
+          <button class="submit-button" type="submit">Entrar</button>
+          <p class="form-message login-message" role="status" aria-live="polite"></p>
+        </form>
+
+        <form
+          class="recovery-form auth-form"
+          id="recovery-form"
+          data-panel="recovery"
+          novalidate
+          hidden
+        >
+          <div class="field">
+            <label for="recovery-email">E-mail</label>
+            <input
+              id="recovery-email"
+              name="recovery-email"
+              type="email"
+              autocomplete="email"
+              autocapitalize="none"
+              inputmode="email"
+              maxlength="254"
+              pattern="^[^\s@]+@[^\s@]+\.[^\s@]{2,}$"
+              placeholder="seu@email.com"
+              spellcheck="false"
+              aria-describedby="recovery-email-error"
+              required
+            />
+            <span class="field-error" id="recovery-email-error"></span>
+          </div>
+
+          <label class="bot-field" for="recovery-company">
+            Empresa
+            <input
+              id="recovery-company"
+              name="recovery-company"
+              type="text"
+              autocomplete="off"
+              tabindex="-1"
+            />
+          </label>
+
+          <button class="submit-button recovery-submit-button" type="submit">
+            Enviar instruções
+          </button>
+
+          <button class="text-button back-link" type="button">
+            Voltar para o login
+          </button>
+
+          <p
+            class="form-message recovery-message"
+            role="status"
+            aria-live="polite"
+          ></p>
+        </form>
+
+        <p class="copyright">© 2026 Isatec Sistemas e Consultoria</p>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
